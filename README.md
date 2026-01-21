@@ -27,7 +27,5 @@ These are the values I got from my code and submitted in the Google Form:
 - Mu: 25.818063543032295
 - c: 0.021570239817484047
 
-Result Graph
-I have attached the graph below. The blue part is the histogram of my data, and the red line is the PDF curve I calculated.
-
-![Result Graph](result_graph.png)
+Result Graph:- 
+ "The output visualization has been uploaded separately as 'result_graph.png'."
