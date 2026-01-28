@@ -1,31 +1,41 @@
-# Assignment-1-AirQuality-PDF
+# Air Quality Analysis – PDF Parameter Estimation
 
-Description
-For this assignment, I wrote a Python script to analyze the air quality data (NO2 levels). The task was to transform the data based on my university roll number and then estimate the probability density function (PDF) parameters.
+## Overview
+In this assignment, I analyzed air quality data, specifically focusing on Nitrogen Dioxide (NO2) levels. The main objective was to transform the raw data using a mathematical function based on my university roll number and then estimate the Probability Density Function (PDF) parameters.
 
-Steps I Followed
+## Dataset Details
+- File Name: data.csv
+- Feature Selected: no2 column
+- Cleaning: Rows with missing values were dropped to ensure accurate calculations.
 
-1. Data Loading: 
-   I loaded the 'data.csv' file and selected the 'no2' column. I dropped the empty rows to make sure the data was clean.
+## Methodology
 
-2. Transformation: 
-   I transformed the original NO2 values (x) into a new variable (z) using the formula given in the assignment:
-   
-   z = x + ar * sin(br * x)
+### 1. Data Transformation
+To analyze the distribution, I transformed the original NO2 values (x) into a new variable (z) using a sinusoidal formula. The transformation parameters were derived dynamically from my unique Roll Number.
 
-   My Roll Number is 102303724. Based on this, I calculated the constants:
-   - ar = 0.25
-   - br = 1.5
+Formula:
+z = x + a_r sin(b_r x)
 
-3. Finding Parameters: 
-   To find the curve that fits this data, I calculated the Mean and Variance of the transformed data (z). Using these, I found the three required parameters: Lambda, Mu, and c.
+Student Details:
+- Roll Number: 102303724
+- Derived Constants:
+  - a_r: 0.25
+  - b_r: 1.5
 
-Final Results
-These are the values I got from my code and submitted in the Google Form:
+### 2. Parameter Estimation
+After transforming the data, I calculated the Mean and Variance of the new variable z. Using these statistical measures, I computed the three required PDF parameters:
+- Lambda
+- Mu
+- Constant (c)
+
+## Results
+The code successfully calculated the parameters. These values matched the ones I submitted in the Google Form.
 
 - Lambda: 0.0014617052940514906
 - Mu: 25.818063543032295
 - c: 0.021570239817484047
 
-Result Graph:- 
- "The output visualization has been uploaded separately as 'result_graph.png'."
+## Visualization
+The graph below shows the histogram of the transformed data along with the estimated PDF curve, verifying that our calculated parameters fit the data distribution well.
+
+![Result Graph](result_graph.png)
